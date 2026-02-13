@@ -36,6 +36,8 @@ const container = {
   },
 };
 
+
+// For split text animation on the name
 const child = {
   hidden: {
     opacity: 0,
@@ -52,6 +54,8 @@ const child = {
   },
 };
 
+
+// For the image animations.
 const imageVariants = {
   hidden: { opacity: 0, y: -50 },
   visible: {
@@ -93,7 +97,6 @@ function App() {
             variants={container}
             initial="hidden"
             animate="visible"
-            exit="exit"
           >
             {currentItem.name.split("").map((letter, index) => (
               <motion.span key={index} variants={child}>
